@@ -1,10 +1,11 @@
 # depslib dependency file v1.0
-1685614771 source:c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\main.c
+1686047569 source:c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<conio.c>
 	"portugues.h"
+	<time.h>
 
-1685615832 c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\portugues.h
+1686048685 c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\portugues.h
 

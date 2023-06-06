@@ -3,6 +3,7 @@
 #include <locale.h>
 #include <conio.c>
 #include "portugues.h"
+#include <time.h>
 
 struct first_menu{
     int menu;
@@ -14,6 +15,8 @@ int main()
             //////////
             // MENU //
             //////////
+    int voltar;
+    do{
     printf("---------------------------\n");
     printf("Language: \n");
     textcolor(LIGHTRED);
@@ -53,5 +56,16 @@ int main()
 
         default: printf("ERRO! REINICIE O SISTEMA!\n");
     }
+    textcolor(LIGHTRED);
+    printf("---------------------------------------------------\n");
+    textcolor(LIGHTRED);
+    printf("Concluido. Deseja voltar ao ínicio?\n 1-Sim\n 2-Não\n");
+    textcolor(LIGHTRED);
+    printf("---------------------------------------------------\n");
+    scanf("%i",&voltar);
+    fflush(stdin);
+    system("cls");
+    }while(voltar==1);
+
         return 0;
 }
