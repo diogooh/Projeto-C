@@ -1,0 +1,5 @@
+--------------  CHAMADA DE INCÊNDIO  --------------
+Tipo de Incêndio: INCÊNDIO RURAL
+Nome: adaf
+Local: sagag
+Telefone: 0

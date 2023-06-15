@@ -1,31 +1,16 @@
 -------------- OCORRÊNCIA 0 --------------
-Idade do Indivíduo: 20
-Sexo do Indivíduo: M
-Telefone do Indivíduo: 4237844
-Local: lisboa, entrecampops, escola digital
-
--------------- OCORRÊNCIA 0 --------------
-Idade do Indivíduo: 16
-Sexo do Indivíduo: M
-Telefone do Indivíduo: 968019209
-Local: Massama
-
--------------- OCORRÊNCIA 0 --------------
-Idade do Indivíduo: 20
-Sexo do Indivíduo: M
-Telefone do Indivíduo: 960190290
-Local: Entrecampos
-
--------------- OCORRÊNCIA 0 --------------
-Idade do Indivíduo: 29
-Sexo do Indivíduo: M
-Telefone do Indivíduo: 968019209
-Local: Entrecampos
-
--------------- OCORRÊNCIA 0 --------------
 Idade do Indivíduo: 18
-Sexo do Indivíduo: M
-Telefone do Indivíduo: -2143444145
-Local: entrecampos
+Sexo do Indivíduo: m
+Telefone do Indivíduo: 968019209
+Local: Entrecampos, escola digital piso -2.
 
-Data: 32762
+Doença: diabetes
+
+-------------- OCORRÊNCIA 0 --------------
+Idade do Indivíduo: 12
+Sexo do Indivíduo: M
+Telefone do Indivíduo: 968019209
+Local: WEFAGA
+
+Doença: Diabetes e Alzeihmer
+

@@ -36,7 +36,7 @@ int main()
         // PORTUGUÊS
         case 1: printf("PT\n");
         system("cls");
-        portuguese_first();
+        portuguese_menu();
         break;
         // INGLÊS
         case 2: printf("ENG\n");

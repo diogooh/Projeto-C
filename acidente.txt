@@ -1,0 +1,5 @@
+--------------  CHAMADA DE ACIDENTE  --------------
+Tipo: ACIDENTE
+Nome: FAFAFG
+Local: GGAGHASHAHD
+Telefone: 968019209
