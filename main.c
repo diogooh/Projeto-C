@@ -2,7 +2,10 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <conio.c>
-#include "portugues.h"
+#include "portugues.h" //1
+#include "ingles.h" // 2
+#include "espanhol.h" // 3
+#include "frances.h" // 4
 #include <time.h>
 
 struct first_menu{
@@ -25,8 +28,6 @@ int main()
     printf("2-ENG\n");
     textcolor(YELLOW);
     printf("3-ES\n");
-    textcolor(BLUE);
-    printf("4-FR\n");
     textcolor(WHITE);
     printf("--> ");
     scanf("%i",&menu.menu);
@@ -41,20 +42,17 @@ int main()
         // INGLÊS
         case 2: printf("ENG\n");
         system("cls");
+        ingles_menu();
         //call_first();
         break;
         // ESPANHOL
         case 3: printf("ES\n");
         system("cls");
-        //call_first();
-        break;
-        // FRANCÊS
-        case 4: printf("FR\n");
-        system("cls");
+        espanhol_menu();
         //call_first();
         break;
 
-        default: printf("ERRO! REINICIE O SISTEMA!\n");
+        default: printf("ERRO! REINICIE O SISTEMA!\n");break;
     }
     textcolor(LIGHTRED);
     printf("---------------------------------------------------\n");

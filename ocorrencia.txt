@@ -14,3 +14,47 @@ Local: WEFAGA
 
 Doença: Diabetes e Alzeihmer
 
+-------------- OCORRÊNCIA 0 --------------
+Idade do Indivíduo: 29
+Sexo do Indivíduo: M
+Telefone do Indivíduo: 942141
+Local: teste
+
+Doença: diabetes
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 29
+Sexo do Indivíduo: M
+Telefone do Indivíduo: 968019209
+Local: Lisboa entrecampos
+
+Doença: diabetes bruna esquizo
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 19
+Sexo do Indivíduo: M
+Telefone do Indivíduo: 968019209
+Local: teste
+
+Doença: bruna torrent
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 59
+Sexo do Indivíduo: M
+Telefone do Indivíduo: 912203131
+Local: benfica estadio
+
+Doença: serrano doen‡as alernas
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 90
+Sexo do Indivíduo: Binario
+Telefone do Indivíduo: 969024124
+Local: porto
+
+Doença: miguel doen‡as
+

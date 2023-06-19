@@ -19,13 +19,23 @@
 1686350605 c:\users\carol\onedrive\Área de trabalho\projeto_final\portugues.h
 	<time.h>
 
-1686816748 source:c:\users\2222092\onedrive - escola digital\diogo\ambiente de trabalho\projeto_final\main.c
+1687164916 source:c:\users\2222092\onedrive - escola digital\diogo\ambiente de trabalho\projeto_final\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
 	<conio.c>
 	"portugues.h"
+	"ingles.h"
+	"espanhol.h"
+	"frances.h"
 	<time.h>
 
-1686825150 c:\users\2222092\onedrive - escola digital\diogo\ambiente de trabalho\projeto_final\portugues.h
+1687165442 c:\users\2222092\onedrive - escola digital\diogo\ambiente de trabalho\projeto_final\portugues.h
+	<time.h>
+
+1687164367 c:\users\2222092\onedrive - escola digital\diogo\ambiente de trabalho\projeto_final\ingles.h
+
+1687164329 c:\users\2222092\onedrive - escola digital\diogo\ambiente de trabalho\projeto_final\espanhol.h
+
+1687161093 c:\users\2222092\onedrive - escola digital\diogo\ambiente de trabalho\projeto_final\frances.h
 

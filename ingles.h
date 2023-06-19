@@ -1,10 +1,9 @@
-#ifndef PORTUGUES_H_INCLUDED
-#define PORTUGUES_H_INCLUDED
-#include <time.h>
+#ifndef INGLES_H_INCLUDED
+#define INGLES_H_INCLUDED
+
+
 #define MAX_DOENCAS 10
-
-
-struct relatorio{
+struct relatorio_ingles{
     int idade;
     char sexo[10];
     char local[100];
@@ -13,36 +12,30 @@ struct relatorio{
     int estado_mau;
     int suporte_vida;
     char doenca[100];
-    char data1;
-}rela;
+}rela_ingles;
 
-struct incendio{
+struct incendio_ingles{
     int tipo;
     char nome[30];
     int telefone;
     char local_incendio[100];
-}inc;
+}inc_ingles;
 
-struct acidente{
+struct acidente_ingles{
     char nome[30];
     int telefone;
     int idade_vitima;
     char local_acidente[100];
     int vitima;
     int estado_vitima;
-}aci;
+}aci_ingles;
 
-struct relatorio_com_vetor{
+struct relatorio_com_vetor_ingles{
     struct relatorio rel;
     char doenca[MAX_DOENCAS][100];
 };
-void obterDataHoraAtual() {
-    time_t t = time(NULL);
-    struct tm* currentTime = localtime(&t);
-    strftime(rela.data1, 30, "%d/%m/%Y %H:%M:%S\n", currentTime);
-}
 
-void portuguese_menu() {
+void ingles_menu() {
     int opcao;
     FILE* ficheiro;
     int num = 0;
@@ -119,7 +112,6 @@ void portuguese_menu() {
 
             ficheiro = fopen("ocorrencia.txt", "a");
             fprintf(ficheiro, "-------------- OCORRÊNCIA %i --------------\n", num);
-            fprintf(ficheiro, "Data e hora atual: %s\n", rela.data1);
             fprintf(ficheiro, "Idade do Indivíduo: %i\n", rela.idade);
             fprintf(ficheiro, "Sexo do Indivíduo: %s\n", rela.sexo);
             fprintf(ficheiro, "Telefone do Indivíduo: %i\n", rela.telefone);
@@ -205,7 +197,6 @@ void portuguese_menu() {
                         tipoincendio = fopen("incendio.txt", "a");
                         fprintf(tipoincendio, "--------------  CHAMADA DE INCÊNDIO  --------------\n");
                         fprintf(tipoincendio, "Tipo de Incêndio: INCÊNDIO RURAL\n");
-                        fprintf(tipoincendio, "Data e hora atual: %s\n", rela.data1);
                         fprintf(tipoincendio, "Nome: %s\n",inc.nome);
                         fprintf(tipoincendio, "Local: %s\n",inc.local_incendio);
                         fprintf(tipoincendio, "Telefone: %i\n",inc.telefone);
@@ -231,7 +222,6 @@ void portuguese_menu() {
                         tipoincendio = fopen("incendio.txt", "a");
                         fprintf(tipoincendio, "--------------  CHAMADA DE INCÊNDIO  --------------\n");
                         fprintf(tipoincendio, "Tipo de Incêndio: INCÊNDIO FLORESTAL\n");
-                        fprintf(tipoincendio, "Data e hora atual: %s\n", rela.data1);
                         fprintf(tipoincendio, "Nome: %s\n",inc.nome);
                         fprintf(tipoincendio, "Local: %s\n",inc.local_incendio);
                         fprintf(tipoincendio, "Telefone: %i\n",inc.telefone);
@@ -255,7 +245,6 @@ void portuguese_menu() {
                         ficheiro = fopen("incendio.txt", "a");
                         fprintf(tipoincendio, "--------------  CHAMADA DE INCÊNDIO  --------------\n");
                         fprintf(tipoincendio, "Tipo de Incêndio: INCÊNDIO INDUSTRIAL\n");
-                        fprintf(tipoincendio, "Data e hora atual: %s\n", rela.data1);
                         fprintf(tipoincendio, "Nome: %s\n",inc.nome);
                         fprintf(tipoincendio, "Local: %s\n",inc.local_incendio);
                         fprintf(tipoincendio, "Telefone: %i\n",inc.telefone);
@@ -307,7 +296,6 @@ void portuguese_menu() {
             rela_acidente = fopen("acidente.txt", "a");
                         fprintf(rela_acidente, "--------------  CHAMADA DE ACIDENTE  --------------\n");
                         fprintf(rela_acidente, "Tipo: ACIDENTE\n");
-                        fprintf(rela_acidente, "Data e hora atual: %s\n", rela.data1);
                         fprintf(rela_acidente, "Nome: %s\n",aci.nome);
                         fprintf(rela_acidente, "Idade do Indivíduo: %i\n",aci.idade_vitima);
                         fprintf(rela_acidente, "Local: %s\n",aci.local_acidente);
@@ -321,4 +309,5 @@ void portuguese_menu() {
             break;
 }
 }
-#endif // PORTUGUES_H_INCLUDED
+
+#endif // INGLES_H_INCLUDED
