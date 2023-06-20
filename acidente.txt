@@ -8,3 +8,10 @@ Tipo: ACIDENTE
 Nome: diogo
 Local: aa
 Telefone: 968019209
+--------------  CHAMADA DE ACIDENTE  --------------
+Tipo: ACIDENTE
+Data e hora atual: (null)
+Nome: Diogo
+Idade do Indivíduo: 18
+Local: IC-19,
+Telefone: 968019209

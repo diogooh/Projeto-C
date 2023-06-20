@@ -58,3 +58,66 @@ Local: porto
 
 Doença: miguel doen‡as
 
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 18
+Sexo do Indivíduo: M
+Telefone do Indivíduo: 968019209
+Local: Entrecampos, escola digital, secretaria
+
+Doença: Diabetes
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 2
+Sexo do Indivíduo: m
+Telefone do Indivíduo: 999999999
+Local: +
+
+Doença: sla
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 2
+Sexo do Indivíduo: m
+Telefone do Indivíduo: 24151
+Local: afaga
+
+Doença: diabetes
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 2
+Sexo do Indivíduo: s
+Telefone do Indivíduo: 24151
+Local: s
+
+Doença: s
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 0
+Sexo do Indivíduo: g
+Telefone do Indivíduo: 0
+Local: g
+
+Doença: g
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 0
+Sexo do Indivíduo: s
+Telefone do Indivíduo: 0
+Local: s
+
+Doença: s
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 0
+Sexo do Indivíduo: s
+Telefone do Indivíduo: 0
+Local: s
+
+Doença: s
+

@@ -307,6 +307,8 @@ void ingles_menu() {
             printf("Pressione Enter para sair...");
             getchar(); // Espera pela entrada de um caractere
             break;
+            textcolor(RED);
+        default: printf("Erro!!\n Digitou algum caracter errado?\n Repita o programa.\n");
 }
 }
 

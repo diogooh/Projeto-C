@@ -3,3 +3,9 @@ Tipo de Incêndio: INCÊNDIO RURAL
 Nome: adaf
 Local: sagag
 Telefone: 0
+--------------  CHAMADA DE INCÊNDIO  --------------
+Tipo de Incêndio: INCÊNDIO RURAL
+Data e hora atual: (null)
+Nome: Diogo
+Local: Serra
+Telefone: 968019209

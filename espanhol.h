@@ -309,6 +309,7 @@ void espanhol_menu() {
             printf("Presiona enter para salir...                                                              ");
             getchar(); // Espera pela entrada de um caractere
             break;
+                    default: printf("Erro!!\n");
 }
 }
 #endif // ESPANHOL_H_INCLUDED

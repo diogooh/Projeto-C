@@ -319,6 +319,7 @@ void portuguese_menu() {
             printf("Pressione Enter para sair...");
             getchar(); // Espera pela entrada de um caractere
             break;
+                    default: printf("Erro!!\n Digitou algum caracter errado?\n Repita o programa.\n");
 }
 }
 #endif // PORTUGUES_H_INCLUDED
