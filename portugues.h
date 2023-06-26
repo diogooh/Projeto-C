@@ -1,9 +1,8 @@
 #ifndef PORTUGUES_H_INCLUDED
 #define PORTUGUES_H_INCLUDED
-#include <time.h>
+
+
 #define MAX_DOENCAS 10
-
-
 struct relatorio{
     int idade;
     char sexo[10];
@@ -13,7 +12,6 @@ struct relatorio{
     int estado_mau;
     int suporte_vida;
     char doenca[100];
-    char data1;
 }rela;
 
 struct incendio{
@@ -36,11 +34,6 @@ struct relatorio_com_vetor{
     struct relatorio rel;
     char doenca[MAX_DOENCAS][100];
 };
-void obterDataHoraAtual() {
-    time_t t = time(NULL);
-    struct tm* currentTime = localtime(&t);
-    strftime(rela.data1, 30, "%d/%m/%Y %H:%M:%S\n", currentTime);
-}
 
 void portuguese_menu() {
     int opcao;
@@ -69,6 +62,7 @@ void portuguese_menu() {
     textcolor(LIGHTGRAY);
     printf("\n\n                       4-SAIR\n\n");
     printf("\n\n --> ");
+    textcolor(WHITE);
     scanf("%i", &opcao);
     fflush(stdin);
     switch(opcao)
@@ -96,30 +90,34 @@ void portuguese_menu() {
             textcolor(LIGHTGREEN);
             // info do relatório
             printf("Digite a idade da pessoa:\n -->");
+            textcolor(WHITE);
             scanf("%i",&rela.idade);
             fflush(stdin);
 
             textcolor(LIGHTMAGENTA);
             printf("Digite o sexo da pessoa (M ou F):\n -->");
+            textcolor(WHITE);
             scanf("%s",&rela.sexo);
             fflush(stdin);
 
             textcolor(LIGHTBLUE);
             printf("Digite este número de telefone:\n  (9 Digitos)-->");
+            textcolor(WHITE);
             scanf("%i", &rela.telefone);
             fflush(stdin);
 
             textcolor(LIGHTCYAN);
             printf("Descreva ao máximo o local onde se encontra.\n (Exemplo: Entrecampos, dentro da estação ao lado da bilheteira):\n");
+            textcolor(WHITE);
             fgets(rela.local, 100, stdin);
 
             textcolor(LIGHTRED);
             printf("Diga se o Indivíduo sofre de alguma doença:\n");
+            textcolor(WHITE);
             fgets(rela.doenca, 100, stdin);
 
             ficheiro = fopen("ocorrencia.txt", "a");
             fprintf(ficheiro, "-------------- OCORRÊNCIA %i --------------\n", num);
-            fprintf(ficheiro, "Data e hora atual: %s\n", rela.data1);
             fprintf(ficheiro, "Idade do Indivíduo: %i\n", rela.idade);
             fprintf(ficheiro, "Sexo do Indivíduo: %s\n", rela.sexo);
             fprintf(ficheiro, "Telefone do Indivíduo: %i\n", rela.telefone);
@@ -129,6 +127,7 @@ void portuguese_menu() {
             // ESTADO DO INDIVÍDUO                                                                                                                                       // EMERGENCIA MEDICA - ESTADO DO INDIVIDUO
             textcolor(LIGHTGREEN);
             printf("O Indivíduo está em bom estado?\n1-Sim\n2-Não\n -->");
+            textcolor(WHITE);
             scanf("%i",&rela.estado);
             fflush(stdin);
             if(rela.estado==1)
@@ -139,6 +138,7 @@ void portuguese_menu() {
                 // MAU ESTADO
                             textcolor(LIGHTRED);
                 printf("Individuo em mau Estado: O Indivíduo está com Falta de Ar ou Inconsciente?\n1-Sim\n2-Não\n -->");
+                textcolor(WHITE);
                 scanf("%i",&rela.estado_mau);
                 fflush(stdin);
                 if(rela.estado_mau==1)
@@ -146,6 +146,7 @@ void portuguese_menu() {
                                 textcolor(LIGHTRED);
                 // ESTADO MAU - O QUE SE FAZER??
                 printf("Sabe fazer suporte básico de vida?\n1-Sim\n2-Não\n -->");
+                textcolor(WHITE);
                 scanf("%i",&rela.suporte_vida);
                 fflush(stdin);
                 if(rela.suporte_vida==1)
@@ -182,6 +183,7 @@ void portuguese_menu() {
             printf("  INCÊNDIOS\n");
             textcolor(LIGHTCYAN);
             printf("Qual é o tipo de incêndios:\n1-Incêndio Rural\n2-Incêndio Florestal\n3-Incêndio Industrial\n --> ");
+            textcolor(WHITE);
             scanf("%i", &inc.tipo);
             fflush(stdin);
             switch(inc.tipo)
@@ -191,21 +193,23 @@ void portuguese_menu() {
                         // rural
                         textcolor(LIGHTCYAN);
                         printf("Qual é o seu nome?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.nome);
                         fflush(stdin);
                         textcolor(LIGHTGREEN);
                         printf("Onde é o local do incêndio?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.local_incendio);
                         fflush(stdin);
                         textcolor(LIGHTMAGENTA);
                         printf("Qual é o seu número de telefone\n");
+                        textcolor(WHITE);
                         scanf("%i",&inc.telefone);
                         fflush(stdin);
 
                         tipoincendio = fopen("incendio.txt", "a");
                         fprintf(tipoincendio, "--------------  CHAMADA DE INCÊNDIO  --------------\n");
                         fprintf(tipoincendio, "Tipo de Incêndio: INCÊNDIO RURAL\n");
-                        fprintf(tipoincendio, "Data e hora atual: %s\n", rela.data1);
                         fprintf(tipoincendio, "Nome: %s\n",inc.nome);
                         fprintf(tipoincendio, "Local: %s\n",inc.local_incendio);
                         fprintf(tipoincendio, "Telefone: %i\n",inc.telefone);
@@ -217,21 +221,23 @@ void portuguese_menu() {
                         // florestal
                         textcolor(LIGHTCYAN);
                         printf("Qual é o seu nome?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.nome);
                         fflush(stdin);
                         textcolor(LIGHTGREEN);
                         printf("Onde é o local do incêndio?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.local_incendio);
                         fflush(stdin);
                         textcolor(LIGHTMAGENTA);
                         printf("Qual é o seu número de telefone\n");
+                        textcolor(WHITE);
                         scanf("%i",&inc.telefone);
                         fflush(stdin);
 
                         tipoincendio = fopen("incendio.txt", "a");
                         fprintf(tipoincendio, "--------------  CHAMADA DE INCÊNDIO  --------------\n");
                         fprintf(tipoincendio, "Tipo de Incêndio: INCÊNDIO FLORESTAL\n");
-                        fprintf(tipoincendio, "Data e hora atual: %s\n", rela.data1);
                         fprintf(tipoincendio, "Nome: %s\n",inc.nome);
                         fprintf(tipoincendio, "Local: %s\n",inc.local_incendio);
                         fprintf(tipoincendio, "Telefone: %i\n",inc.telefone);
@@ -241,21 +247,23 @@ void portuguese_menu() {
                         printf("  INCÊNDIO INDUSTRIAL  \n");
                         // industrial
                         printf("Qual é o seu nome?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.nome);
                         fflush(stdin);
 
                         printf("Onde é o local do incêndio?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.local_incendio);
                         fflush(stdin);
 
                         printf("Qual é o seu número de telefone\n");
+                        textcolor(WHITE);
                         scanf("%i",&inc.telefone);
                         fflush(stdin);
 
                         ficheiro = fopen("incendio.txt", "a");
                         fprintf(tipoincendio, "--------------  CHAMADA DE INCÊNDIO  --------------\n");
                         fprintf(tipoincendio, "Tipo de Incêndio: INCÊNDIO INDUSTRIAL\n");
-                        fprintf(tipoincendio, "Data e hora atual: %s\n", rela.data1);
                         fprintf(tipoincendio, "Nome: %s\n",inc.nome);
                         fprintf(tipoincendio, "Local: %s\n",inc.local_incendio);
                         fprintf(tipoincendio, "Telefone: %i\n",inc.telefone);
@@ -274,27 +282,33 @@ void portuguese_menu() {
             textcolor(LIGHTCYAN);
 
             printf("Qual é o seu nome?\n");
+            textcolor(WHITE);
             scanf("%s",&aci.nome);
             fflush(stdin);
 
             printf("Digite a idade da pessoa:\n -->");
+            textcolor(WHITE);
             scanf("%i",&aci.idade_vitima);
             fflush(stdin);
 
             printf("Onde é o local do Acidente?\n");
+            textcolor(WHITE);
             scanf("%s",&aci.local_acidente);
             fflush(stdin);
 
             printf("Qual é o seu número de telefone\n");
+            textcolor(WHITE);
             scanf("%i",&aci.telefone);
             fflush(stdin);
 
             printf("Tem alguma vitima?\n1-Sim\n2-Não\n--> ");
+            textcolor(WHITE);
             scanf("%i",&aci.vitima);
             fflush(stdin);
             if(aci.vitima==1)
             {
                 printf("Como se encontra a vitima?\n1-Bem\n2-Mal\n--> ");
+                textcolor(WHITE);
                 scanf("%i",&aci.estado_vitima);
                 if(aci.estado_vitima==2)
                 {
@@ -307,7 +321,6 @@ void portuguese_menu() {
             rela_acidente = fopen("acidente.txt", "a");
                         fprintf(rela_acidente, "--------------  CHAMADA DE ACIDENTE  --------------\n");
                         fprintf(rela_acidente, "Tipo: ACIDENTE\n");
-                        fprintf(rela_acidente, "Data e hora atual: %s\n", rela.data1);
                         fprintf(rela_acidente, "Nome: %s\n",aci.nome);
                         fprintf(rela_acidente, "Idade do Indivíduo: %i\n",aci.idade_vitima);
                         fprintf(rela_acidente, "Local: %s\n",aci.local_acidente);

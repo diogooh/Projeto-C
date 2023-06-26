@@ -52,16 +52,17 @@ void ingles_menu() {
                                      |_____||_____||_______|
                   )EOF");
     textcolor(LIGHTGRAY);
-    printf("\n\n                       Olá daqui fala da emergência médica!\n                       Em que posso ajudar??");
+    printf("\n\n                       Hello, this is about the medical emergency!\n                       How can I help??");
     textcolor(YELLOW);
-    printf("\n\n                       1-EMERGÊNCIA MÉDICA");
+    printf("\n\n                       1-MEDICAL EMERGENCY");
     textcolor(LIGHTRED);
-    printf("\n\n                       2-INCÊNDIO RURAL\n                        |FLORESTAL\n                        |INDUSTRIAL\n                        ----------------");
+    printf("\n\n                       2-RURAL FIRE\n                        |FORESTRY\n                        |INDUSTRIAL\n                        ----------------");
     textcolor(LIGHTBLUE);
-    printf("\n\n                       3-ACIDENTES");
+    printf("\n\n                       3-ACCIDENTS");
     textcolor(LIGHTGRAY);
-    printf("\n\n                       4-SAIR\n\n");
+    printf("\n\n                       4-QUIT\n\n");
     printf("\n\n --> ");
+    textcolor(WHITE);
     scanf("%i", &opcao);
     fflush(stdin);
     switch(opcao)
@@ -84,30 +85,35 @@ void ingles_menu() {
                          )EOF");
 
             textcolor(LIGHTBLUE);
-            printf("\n   EMERGÊNCIA MÉDICA\n");
+            printf("\n   MEDICAL EMERGENCY\n");
 
             textcolor(LIGHTGREEN);
             // info do relatório
-            printf("Digite a idade da pessoa:\n -->");
+            printf("Enter the person's age:\n -->");
+            textcolor(WHITE);
             scanf("%i",&rela.idade);
             fflush(stdin);
 
             textcolor(LIGHTMAGENTA);
-            printf("Digite o sexo da pessoa (M ou F):\n -->");
+            printf("Enter the person's gender (M or F):\n -->");
+            textcolor(WHITE);
             scanf("%s",&rela.sexo);
             fflush(stdin);
 
             textcolor(LIGHTBLUE);
-            printf("Digite este número de telefone:\n  (9 Digitos)-->");
+            printf("Enter this phone number:\n  (9 digits)-->");
+            textcolor(WHITE);
             scanf("%i", &rela.telefone);
             fflush(stdin);
 
             textcolor(LIGHTCYAN);
-            printf("Descreva ao máximo o local onde se encontra.\n (Exemplo: Entrecampos, dentro da estação ao lado da bilheteira):\n");
+            printf("Describe as much as possible where you are.\n (Example: Entrecampos, inside the station next to the ticket office):\n");
+            textcolor(WHITE);
             fgets(rela.local, 100, stdin);
 
             textcolor(LIGHTRED);
-            printf("Diga se o Indivíduo sofre de alguma doença:\n");
+            printf("Tell if the Individual suffers from any disease:\n");
+            textcolor(WHITE);
             fgets(rela.doenca, 100, stdin);
 
             ficheiro = fopen("ocorrencia.txt", "a");
@@ -120,48 +126,51 @@ void ingles_menu() {
 
             // ESTADO DO INDIVÍDUO                                                                                                                                       // EMERGENCIA MEDICA - ESTADO DO INDIVIDUO
             textcolor(LIGHTGREEN);
-            printf("O Indivíduo está em bom estado?\n1-Sim\n2-Não\n -->");
+            printf("Is the individual in good condition?\n1-Yes\n2-No\n -->");
+            textcolor(WHITE);
             scanf("%i",&rela.estado);
             fflush(stdin);
             if(rela.estado==1)
             {
                 // BOM ESTADO
-                printf("Individuo em bom Estado: Se o indivíduo encontra-se em bom estado,\napenas aguarde a nossa viatura deslocar-se ao local de resgate.\n");
+                printf("Individual in good condition: If the individual is in good condition,\njust wait for our vehicle to travel to the rescue location.\n");
             } else{
                 // MAU ESTADO
                             textcolor(LIGHTRED);
-                printf("Individuo em mau Estado: O Indivíduo está com Falta de Ar ou Inconsciente?\n1-Sim\n2-Não\n -->");
+                printf("Subject in poor condition: Is the subject short of breath or unconscious?\n1-Yes\n2-No\n -->");
+                textcolor(WHITE);
                 scanf("%i",&rela.estado_mau);
                 fflush(stdin);
                 if(rela.estado_mau==1)
                 {
                                 textcolor(LIGHTRED);
                 // ESTADO MAU - O QUE SE FAZER??
-                printf("Sabe fazer suporte básico de vida?\n1-Sim\n2-Não\n -->");
+                printf("Do you know how to perform basic life support?\n1-Yes\n2-No\n -->");
+                textcolor(WHITE);
                 scanf("%i",&rela.suporte_vida);
                 fflush(stdin);
                 if(rela.suporte_vida==1)
                 {
                     // SABE SUPORTE BÁSICO DE VIDA
-                    printf("Pode começar a fazer SUPORTE BÁSICO DE VIDA.\n Tenha bastante atenção e esteja relaxada.\n");
+                    printf("You can start doing BASIC LIFE SUPPORT.\n Pay close attention and be relaxed.\n");
                 } else if(rela.idade<18)
                 {
                     textcolor(LIGHTBLUE);
                     // ENSINAR SUPORTE BÁSICO DE VIDA CRIANÇA
-                    printf("Logo que verifique que o latente/criança não respira normalmente, faça 5 ventilações apenas com a quantidade de ar necessária para expandir eficazmente o tórax.\n");
-                    printf("Adapte as compressões ao tamanho da vítima: se bebé até um ano use apenas 2 dedos e se criança até 8 anos apenas uma mão, deprimindo até 1/3 da altura do tórax.\n");
+                    printf("As soon as you verify that the infant/child is not breathing normally, give 5 breaths with only the amount of air needed to effectively expand the chest.\n");
+                    printf("Adapt the compressions to the size of the victim: if a baby up to one year old, use only 2 fingers and if a child up to 8 years old, just one hand, depressing up to 1/3 of the chest height.\n");
                 } else{
                     textcolor(LIGHTGREEN);
                     // ENSINAR SUPORTE BÁSICO DE VIDA ADULTO
-                    printf("Deite a vitima no chão com a barriga virada para cima,\n coloque as suas mãos sobrepostas com os dedos entrelaçados no meio do peito da vítima.\n");
-                    printf("Com os braços esticados e perpendiculares ao corpo da vítima, pressione o peito, fazendo com que este baixe visivelmente e alivie.\n Repita 30 vezes este movimento de compressão e descompressão do peito da vítima a um ritmo de 100 a 120 por minuto.\n");
-                    printf("Ao fim das 30 compressões efetue duas ventilações através da boca da vítima. Para isso encha os pulmões de ar e expire para a boca da vítima,\n tapando-lhe o nariz com os seus dedos e isolando com os seus lábios os da vítima, para que não exista fuga do ar.\n Embora a ventilação boca-a-boca seja relativamente segura, sem casos de infeção grave descritos, é recomendável a utilização de máscaras de reanimação. Nos casos em que não seja possível fazer ventilações, faça apenas as compressões.\n");
-                    printf("Após ventilar, retome as compressões e siga sempre a sequência de 30 compressões torácicas com 2 ventilações. Mantenha as manobras até à chegada de ajuda ou a vítima recuperar.\n");
+                    printf("Lay the victim on the ground with his stomach facing up,\n place your hands overlapping with fingers interlaced in the middle of the victim's chest.\n");
+                    printf("With your arms straight and perpendicular to the victim's body, press the chest, making it visibly lower and relieve.\n Repeat this compression and decompression movement of the victim's chest 30 times at a rate of 100 to 120 per minute.\ n");
+                    printf("After 30 compressions, give two breaths through the victim's mouth. To do this, fill your lungs with air and exhale into the victim's mouth,\n covering his nose with your fingers and isolating the victim's lips with your lips, so that there is no air leakage.\n Although mouth ventilation -to-mouth is relatively safe, with no cases of serious infection described, the use of resuscitation masks is recommended. In cases where ventilations are not possible, perform compressions only.\n");
+                    printf("After ventilating, resume compressions and always follow the sequence of 30 chest compressions with 2 breaths. Keep maneuvering until help arrives or the victim recovers.\n");
                 }
                 } else{
                 // BOM ESTADO
                 textcolor(LIGHTGRAY);
-                printf("Individuo em bom Estado: Se o indivíduo encontra-se em bom estado,\napenas aguarde a nossa viatura deslocar-se ao local de resgate.\n");
+                printf("Individual in good condition: If the individual is in good condition,\njust wait for our vehicle to travel to the rescue location.\n");
                 }
             }
             fclose(ficheiro);
@@ -171,26 +180,30 @@ void ingles_menu() {
         case 2:
             system("cls");
             textcolor(LIGHTRED);
-            printf("  INCÊNDIOS\n");
+            printf("  FIRE\n");
             textcolor(LIGHTCYAN);
-            printf("Qual é o tipo de incêndios:\n1-Incêndio Rural\n2-Incêndio Florestal\n3-Incêndio Industrial\n --> ");
+            printf("What is the type of fire:\n1-Rural Fire\n2-Forest Fire\n3-Industrial Fire\n --> ");
+            textcolor(WHITE);
             scanf("%i", &inc.tipo);
             fflush(stdin);
             switch(inc.tipo)
             {
                 case 1: textcolor(LIGHTBLUE);                                                                                                                                                                                          // incendio rural
-                        printf("  INCÊNDIO RURAL  \n");
+                        printf("  COUNTRY FIRE  \n");
                         // rural
                         textcolor(LIGHTCYAN);
-                        printf("Qual é o seu nome?\n");
+                        printf("What is your name?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.nome);
                         fflush(stdin);
                         textcolor(LIGHTGREEN);
-                        printf("Onde é o local do incêndio?\n");
+                        printf("Where is the fire site?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.local_incendio);
                         fflush(stdin);
                         textcolor(LIGHTMAGENTA);
-                        printf("Qual é o seu número de telefone\n");
+                        printf("What is your phone number\n");
+                        textcolor(WHITE);
                         scanf("%i",&inc.telefone);
                         fflush(stdin);
 
@@ -204,18 +217,21 @@ void ingles_menu() {
                         break;
 
                 case 2: textcolor(LIGHTRED);
-                        printf("  INCÊNDIO FLORESTAL  \n");                                                                                                                                                                                  // incendio florestal
+                        printf("  FOREST FIRE  \n");                                                                                                                                                                                  // incendio florestal
                         // florestal
                         textcolor(LIGHTCYAN);
-                        printf("Qual é o seu nome?\n");
+                        printf("What is your name?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.nome);
                         fflush(stdin);
                         textcolor(LIGHTGREEN);
-                        printf("Onde é o local do incêndio?\n");
+                        printf("Where is the fire site?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.local_incendio);
                         fflush(stdin);
                         textcolor(LIGHTMAGENTA);
-                        printf("Qual é o seu número de telefone\n");
+                        printf("What is your phone number\n");
+                        textcolor(WHITE);
                         scanf("%i",&inc.telefone);
                         fflush(stdin);
 
@@ -228,17 +244,20 @@ void ingles_menu() {
                         break;
 
                 case 3: textcolor(LIGHTGREEN);                                                                                                                                                                                         // incendio industrial
-                        printf("  INCÊNDIO INDUSTRIAL  \n");
+                        printf("  INDUSTRIAL FIRE  \n");
                         // industrial
-                        printf("Qual é o seu nome?\n");
+                        printf("What is your name?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.nome);
                         fflush(stdin);
 
-                        printf("Onde é o local do incêndio?\n");
+                        printf("Where is the fire site?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.local_incendio);
                         fflush(stdin);
 
-                        printf("Qual é o seu número de telefone\n");
+                        printf("What is your phone number\n");
+                        textcolor(WHITE);
                         scanf("%i",&inc.telefone);
                         fflush(stdin);
 
@@ -259,37 +278,42 @@ void ingles_menu() {
         case 3:                                                                                                                                                                                         // ACIDENTE
             system("cls");
             textcolor(LIGHTRED);
-            printf("  ACIDENTE\n");
+            printf("  ACCIDENT\n");
             textcolor(LIGHTCYAN);
 
-            printf("Qual é o seu nome?\n");
+            printf("What is your name?\n");
+            textcolor(WHITE);
             scanf("%s",&aci.nome);
             fflush(stdin);
 
-            printf("Digite a idade da pessoa:\n -->");
+            printf("Enter the person's age:\n -->");
+            textcolor(WHITE);
             scanf("%i",&aci.idade_vitima);
             fflush(stdin);
 
-            printf("Onde é o local do Acidente?\n");
+            printf("Where is the location of the Accident?\n");
             scanf("%s",&aci.local_acidente);
             fflush(stdin);
 
-            printf("Qual é o seu número de telefone\n");
+            printf("What is your phone number\n");
+            textcolor(WHITE);
             scanf("%i",&aci.telefone);
             fflush(stdin);
 
-            printf("Tem alguma vitima?\n1-Sim\n2-Não\n--> ");
+            printf("Is there any victim?\n1-Yes\n2-No\n--> ");
+            textcolor(WHITE);
             scanf("%i",&aci.vitima);
             fflush(stdin);
             if(aci.vitima==1)
             {
-                printf("Como se encontra a vitima?\n1-Bem\n2-Mal\n--> ");
+                printf("How is the victim?\n1-Good\n2-Bad\n--> ");
+                textcolor(WHITE);
                 scanf("%i",&aci.estado_vitima);
                 if(aci.estado_vitima==2)
                 {
-                    printf("A Emergência Médica vem também ao encontro do local. Espero que aguarde.\n Pelas equipas chegarem ao local.\n");
+                    printf("The Medical Emergency also comes to meet the place. Hope you wait.\n For the teams to arrive on site.\n");
                 } else{
-                    printf("A espere apenas pelos bombeiros chegarem para ajudar.\n");
+                    printf("Just wait for the firefighters to arrive to help.\n");
                 }
             }
 
@@ -304,11 +328,11 @@ void ingles_menu() {
             break;
         // SAIR
         case 4:
-            printf("Pressione Enter para sair...");
+            printf("Press enter to exit...");
             getchar(); // Espera pela entrada de um caractere
             break;
             textcolor(RED);
-        default: printf("Erro!!\n Digitou algum caracter errado?\n Repita o programa.\n");
+        default: printf("Error!!\n Did you type a wrong character?\n Repeat the program.\n");
 }
 }
 

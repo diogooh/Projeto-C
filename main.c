@@ -5,7 +5,6 @@
 #include "portugues.h" //1
 #include "ingles.h" // 2
 #include "espanhol.h" // 3
-#include "frances.h" // 4
 #include <time.h>
 
 struct first_menu{
@@ -28,8 +27,9 @@ int main()
     printf("2-ENG\n");
     textcolor(YELLOW);
     printf("3-ES\n");
-    textcolor(WHITE);
+    textcolor(LIGHTCYAN);
     printf("--> ");
+    textcolor(WHITE);
     scanf("%i",&menu.menu);
     printf("---------------------------\n");
     switch(menu.menu)
@@ -60,6 +60,7 @@ int main()
     printf("Concluido. Deseja voltar ao ínicio?\n 1-Sim\n 2-Não\n");
     textcolor(LIGHTRED);
     printf("---------------------------------------------------\n");
+    textcolor(WHITE);
     scanf("%i",&voltar);
     fflush(stdin);
     system("cls");

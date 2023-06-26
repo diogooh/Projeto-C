@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1687164916 source:c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\main.c
+1687419207 source:c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\main.c
 	<stdio.h>
 	<stdlib.h>
 	<locale.h>
@@ -7,11 +7,9 @@
 	"portugues.h"
 	"ingles.h"
 	"espanhol.h"
-	"frances.h"
 	<time.h>
 
-1687255276 c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\portugues.h
-	<time.h>
+1687766565 c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\portugues.h
 
 1686260134 source:c:\users\carol\onedrive\Área de trabalho\projeto_final\main.c
 	<stdio.h>
@@ -43,9 +41,9 @@
 
 1687161093 c:\users\2222092\onedrive - escola digital\diogo\ambiente de trabalho\projeto_final\frances.h
 
-1687255246 c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\ingles.h
+1687766565 c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\ingles.h
 
-1687164329 c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\espanhol.h
+1687766565 c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\espanhol.h
 
 1687161093 c:\users\2222092\onedrive - escola digital\diogo\prj\projeto_final\frances.h
 

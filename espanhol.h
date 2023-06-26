@@ -64,6 +64,7 @@ void espanhol_menu() {
     textcolor(LIGHTGRAY);
     printf("\n\n                       4-SALIR\n\n");
     printf("\n\n --> ");
+    textcolor(WHITE);
     scanf("%i", &opcao);
     fflush(stdin);
     switch(opcao)
@@ -91,25 +92,30 @@ void espanhol_menu() {
             textcolor(LIGHTGREEN);
             // info do relatório
             printf("Ingresa la edad de la persona:\n -->");
+            textcolor(WHITE);
             scanf("%i",&rela.idade);
             fflush(stdin);
 
             textcolor(LIGHTMAGENTA);
             printf("Ingrese el sexo de la persona (M o F):\n -->");
+            textcolor(WHITE);
             scanf("%s",&rela.sexo);
             fflush(stdin);
 
             textcolor(LIGHTBLUE);
             printf("Ingrese este número de teléfono:\n (9 dígitos)-->");
+            textcolor(WHITE);
             scanf("%i", &rela.telefone);
             fflush(stdin);
 
             textcolor(LIGHTCYAN);
             printf("Describe lo más posible dónde te encuentras.\n (Ejemplo: Entrecampos, dentro de la estación al lado de la taquilla):\n");
+            textcolor(WHITE);
             fgets(rela.local, 100, stdin);
 
             textcolor(LIGHTRED);
             printf("Decir si el individuo padece alguna enfermedad:\n");
+            textcolor(WHITE);
             fgets(rela.doenca, 100, stdin);
 
             ficheiro = fopen("ocorrencia.txt", "a");
@@ -123,6 +129,7 @@ void espanhol_menu() {
             // ESTADO DO INDIVÍDUO                                                                                                                                       // EMERGENCIA MEDICA - ESTADO DO INDIVIDUO
             textcolor(LIGHTGREEN);
             printf("¿El individuo está en buenas condiciones?\n1-Sí\n2-No\n -->");
+            textcolor(WHITE);
             scanf("%i",&rela.estado);
             fflush(stdin);
             if(rela.estado==1)
@@ -133,6 +140,7 @@ void espanhol_menu() {
                 // MAU ESTADO
                             textcolor(LIGHTRED);
                 printf("Sujeto en malas condiciones: ¿El sujeto tiene dificultad para respirar o está inconsciente?\n1-Sí\n2-No\n -->");
+                textcolor(WHITE);
                 scanf("%i",&rela.estado_mau);
                 fflush(stdin);
                 if(rela.estado_mau==1)
@@ -140,6 +148,7 @@ void espanhol_menu() {
                                 textcolor(LIGHTRED);
                 // ESTADO MAU - O QUE SE FAZER??
                 printf("¿Sabes cómo realizar el soporte vital básico?\n1-Sí\n2-No\n--> ");
+                textcolor(WHITE);
                 scanf("%i",&rela.suporte_vida);
                 fflush(stdin);
                 if(rela.suporte_vida==1)
@@ -176,6 +185,7 @@ void espanhol_menu() {
             printf("  FUEGO\n");
             textcolor(LIGHTCYAN);
             printf("Cuál es el tipo de incendio:\n1-Incendio rural\n2-Incendio forestal\n3-Incendio industrial\n --> ");
+            textcolor(WHITE);
             scanf("%i", &inc.tipo);
             fflush(stdin);
             switch(inc.tipo)
@@ -185,14 +195,17 @@ void espanhol_menu() {
                         // rural
                         textcolor(LIGHTCYAN);
                         printf("¿Cual es tu nombre?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.nome);
                         fflush(stdin);
                         textcolor(LIGHTGREEN);
                         printf("¿Dónde está el lugar del incendio?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.local_incendio);
                         fflush(stdin);
                         textcolor(LIGHTMAGENTA);
                         printf("Cuál es tu número de teléfono\n");
+                        textcolor(WHITE);
                         scanf("%i",&inc.telefone);
                         fflush(stdin);
 
@@ -210,16 +223,19 @@ void espanhol_menu() {
                         // florestal
                         textcolor(LIGHTCYAN);
                         printf("¿Cual es tu nombre?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.nome);
                         fflush(stdin);
                         textcolor(LIGHTGREEN);
                         printf("¿Dónde está el lugar del incendio?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.local_incendio);
                         fflush(stdin);
                         textcolor(LIGHTMAGENTA);
                         printf("Cuál es tu número de teléfono\n");
+                        textcolor(WHITE);
                         scanf("%i",&inc.telefone);
-                        fflush(stdin);;
+                        fflush(stdin);
 
                         tipoincendio = fopen("incendio.txt", "a");
                         fprintf(tipoincendio, "-------------- LLAMADA DE FUEGO --------------\n");
@@ -234,14 +250,17 @@ void espanhol_menu() {
                         // industrial
                         textcolor(LIGHTCYAN);
                         printf("¿Cual es tu nombre?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.nome);
                         fflush(stdin);
                         textcolor(LIGHTGREEN);
                         printf("¿Dónde está el lugar del incendio?\n");
+                        textcolor(WHITE);
                         scanf("%s",&inc.local_incendio);
                         fflush(stdin);
                         textcolor(LIGHTMAGENTA);
                         printf("Cuál es tu número de teléfono\n");
+                        textcolor(WHITE);
                         scanf("%i",&inc.telefone);
                         fflush(stdin);
                         ficheiro = fopen("incendio.txt", "a");
@@ -265,27 +284,33 @@ void espanhol_menu() {
             textcolor(LIGHTCYAN);
 
             printf("Cual es tu nombre?\n");
+            textcolor(WHITE);
             scanf("%s",&aci.nome);
             fflush(stdin);
 
             printf("Ingrese la edad de la persona:\n -->");
+            textcolor(WHITE);
             scanf("%i",&aci.idade_vitima);
             fflush(stdin);
 
             printf("¿Dónde está el lugar del Accidente?\n");
+            textcolor(WHITE);
             scanf("%s",&aci.local_acidente);
             fflush(stdin);
 
             printf("Cuál es tu número de teléfono\n");
+            textcolor(WHITE);
             scanf("%i",&aci.telefone);
             fflush(stdin);
 
             printf("¿Hay víctimas?\n1-Sí\n2-No\n--> ");
+            textcolor(WHITE);
             scanf("%i",&aci.vitima);
             fflush(stdin);
             if(aci.vitima==1)
             {
                 printf("¿Cómo está la víctima?\n1-Bien\n2-Malo\n--> ");
+                textcolor(WHITE);
                 scanf("%i",&aci.estado_vitima);
                 if(aci.estado_vitima==2)
                 {

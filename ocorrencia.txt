@@ -121,3 +121,29 @@ Local: s
 
 Doença: s
 
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 34
+Sexo do Indivíduo: F
+Telefone do Indivíduo: 923456789
+Local: alvalade na estacao campo grande
+
+Doença: diabetes
+
+-------------- OCORRÊNCIA 0 --------------
+Data e hora atual: (null)
+Idade do Indivíduo: 1
+Sexo do Indivíduo: 111
+Telefone do Indivíduo: 1
+Local: 1
+
+Doença: 1
+
+-------------- OCORRÊNCIA 0 --------------
+Idade do Indivíduo: 1
+Sexo do Indivíduo: 1
+Telefone do Indivíduo: 1
+Local: 1
+
+Doença: 1
+
