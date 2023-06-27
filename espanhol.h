@@ -119,7 +119,7 @@ void espanhol_menu() {
             fgets(rela.doenca, 100, stdin);
 
             ficheiro = fopen("ocorrencia.txt", "a");
-            fprintf(ficheiro, "-------------- OCURRENCIA %i --------------\n", num);
+            fprintf(ficheiro, "-------------- OCURRENCIA --------------\n");
             fprintf(ficheiro, "Edad del individuo: %i\n", rela.idade);
             fprintf(ficheiro, "Género del individuo: %s\n", rela.sexo);
             fprintf(ficheiro, "Teléfono del individuo: %i\n", rela.telefone);
@@ -212,7 +212,7 @@ void espanhol_menu() {
                         tipoincendio = fopen("incendio.txt", "a");
                         fprintf(tipoincendio, "-------------- LLAMADA DE FUEGO --------------\n");
                         fprintf(tipoincendio, "Tipo de Fuego: Fuego Rural\n");
-                        fprintf(tipoincendio, "Nombre: %s\n",inc.nome);
+                        fprintf(tipoincendio, "Nombre: %s\n",strlwr(inc.nome));
                         fprintf(tipoincendio, "Local: %s\n",inc.local_incendio);
                         fprintf(tipoincendio, "Teléfono: %i\n",inc.telefone);
 
@@ -240,7 +240,7 @@ void espanhol_menu() {
                         tipoincendio = fopen("incendio.txt", "a");
                         fprintf(tipoincendio, "-------------- LLAMADA DE FUEGO --------------\n");
                         fprintf(tipoincendio, "Tipo de Fuego: Fuego forestal\n");
-                        fprintf(tipoincendio, "Nombre: %s\n",inc.nome);
+                        fprintf(tipoincendio, "Nombre: %s\n",strlwr(inc.nome));
                         fprintf(tipoincendio, "Local: %s\n",inc.local_incendio);
                         fprintf(tipoincendio, "Teléfono: %i\n",inc.telefone);
                         break;
@@ -266,13 +266,15 @@ void espanhol_menu() {
                         ficheiro = fopen("incendio.txt", "a");
                         fprintf(tipoincendio, "-------------- LLAMADA DE FUEGO --------------\n");
                         fprintf(tipoincendio, "Tipo de Fuego: Fuego industrial\n");
-                        fprintf(tipoincendio, "Nombre: %s\n",inc.nome);
+                        fprintf(tipoincendio, "Nombre: %s\n",strlwr(inc.nome));
                         fprintf(tipoincendio, "Local: %s\n",inc.local_incendio);
                         fprintf(tipoincendio, "Teléfono: %i\n",inc.telefone);
 
                         break;
                         default: printf("Encontramos un problema, vuelva a ejecutar el programa.\n");break;
             }
+                                    printf("Espere a que el equipo llegue al sitio\nManténgase alejado del fuego.\n");
+
             fclose(tipoincendio);
             break;
 
@@ -319,11 +321,11 @@ void espanhol_menu() {
                     printf("Solo espera a que lleguen los bomberos para ayudar.\n");
                 }
             }
-
+                                            printf("Espere a que el equipo llegue al sitio\nManténgase alejado del accidente.\n");
             rela_acidente = fopen("acidente.txt", "a");
                         fprintf(rela_acidente, "--------------  LLAMADA DE ACCIDENTE  --------------\n");
                         fprintf(rela_acidente, "Tipo: ACCIDENTE\n");
-                        fprintf(rela_acidente, "Nombre: %s\n",aci.nome);
+                        fprintf(rela_acidente, "Nombre: %s\n",strlwr(aci.nome));
                         fprintf(rela_acidente, "Edad del individuo: %i\n",aci.idade_vitima);
                         fprintf(rela_acidente, "Local: %s\n",aci.local_acidente);
                         fprintf(rela_acidente, "Teléfono: %i\n",aci.telefone);
